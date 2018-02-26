@@ -1,0 +1,1 @@
+#!/bin/ksh# First paramter $1 - string in which to search# Second parameter $2 - string to searchCUTMATCHED1=`echo $1 |sed s=$2.*=$2=g`CUTMATCHED2=`echo $CUTMATCHED1 |sed s=$2==g`echo $CUTMATCHED2
