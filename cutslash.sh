@@ -1,1 +1,2 @@
-#!/bin/kshecho $1 | sed y=/=_=
+#!/bin/ksh
+echo $1 | sed y=/=_=
