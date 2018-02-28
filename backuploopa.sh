@@ -8,10 +8,12 @@ echo $RUNDATE
 FILENAME="/backup/backup_"$RUNDATE"_"$1".tar"
 DIR=""
 tar -cvf $FILENAME /backup/scriptnconf*
-for i in `ls -1 /` do
+for i in `ls -1 /`
+do
   i="/"$i
   MATCHWRONG=0
-  for j in `cat $2`    do
+  for j in `cat $2`
+  do
     TOMATCH=`./searchstring.sh $i $j`
     if [ -z $TOMATCH ]; then
       MATCHWRONG=1
@@ -26,5 +28,5 @@ for i in `ls -1 /` do
     echo $i
     echo "Out of scope"
   fi
- done
- echo ""gzip $FILENAME
+done
+echo ""gzip $FILENAME
