@@ -1,4 +1,5 @@
-#!/bin/ksh# SUMTHEFS
+#!/bin/ksh
+# SUMTHEFS
 # This scripts maps the filesystem tree from / node
 # and writes down cryptograhpic checksums for files
 # and also linker info for executables
