@@ -3,9 +3,12 @@
 # This scripts maps the filesystem tree from / node
 # and writes down cryptograhpic checksums for files
 # and also linker info for executables
-## First parameter $1 - sum name# Second parameter $2 - config file
+# First parameter $1 - sum name
+# Second parameter $2 - config file
 set -e
-RUNDATE=`date +%x` &&SUPERSTART=`pwd` &&CONFIG=$SUPERSTART"/"$2
+RUNDATE=`date +%x` 
+SUPERSTART=`pwd` 
+CONFIG=$SUPERSTART"/"$2
 if [ -x /usr/bin/ld ]; then
   LD=/usr/bin/ld
   $LD -V 
