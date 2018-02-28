@@ -75,15 +75,17 @@ function checkthefile {
       echo "Tree:" >> $LOGFILENAME
       find / >> $LOGFILENAME
       echo "Cryptographic checksums and linker info:" >> $LOGFILENAME
-        for i in `find /` do
+        for i in `find /` 
+        do
           MATCHWRONG=0
-          for j in `cat $CONFIG` do
+          for j in `cat $CONFIG`
+          do
             TOMATCH=`$SUPERSTART/searchstring.sh $i $j`
             if [ -z $TOMATCH ]; then
               MATCHWRONG=1
               break
             fi
-          done &&
+          done
           if [ $MATCHWRONG -eq 0 ]; then
             if [ -d $i ]; then
               echo "Dir"
