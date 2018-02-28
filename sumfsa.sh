@@ -28,17 +28,17 @@ function sumthefile {
 # First parameter $1 - log path
 # Second parameter $2 - file path
 # Third patameter $3 - linker 
-    echo $2
+    echo $2
     if [ -x /usr/bin/sha256sum ]; then
       /usr/bin/sha256sum $2 >> $1
     elif [ -x /usr/bin/cksum ]; then
       /usr/bin/cksum -a sha256 $2 >> $1
-    fi     
-     #sha224sum $2 >> $1    
-     #sha256sum $2 >> $1    
-     #sha384sum $2 >> $1    
-     #sha512sum $2 >> $1
-    if [ -z $3 ]; then
+    fi
+    #sha224sum $2 >> $1
+    #sha256sum $2 >> $1
+    #sha384sum $2 >> $1
+    #sha512sum $2 >> $1
+    if [ -z $3 ]; then
       echo "Not checking linker"
     elif [ -x $LD ]; then
       echo "Linker Info"     
@@ -62,10 +62,12 @@ function checkthefile {
   elif [ -e $ANALYZED ]; then
     echo $ANALYZED
     sumthefile $LOGFILENAME $ANALYZED
-  else    echo $ANALYZED
-    echo "Target does not exists."fi}
-    RUNDATE=`./cutslash.sh 
-    $RUNDATE`
+  else
+    echo $ANALYZED
+    echo "Target does not exists."
+  fi
+}
+    RUNDATE=`./cutslash.sh $RUNDATE`
     LOGDIR=`pwd`"/summedfs_"$RUNDATE$1
     LOGFILENAME=$LOGDIR"/AllPaths$RUNDATE.log"
     MATCHWRONG=0
