@@ -18,7 +18,7 @@ do
     if [ -z $TOMATCH ]; then
       MATCHWRONG=1
       break
-    fi    
+    fi
   done
   if [ $MATCHWRONG -eq 0 ]; then
     DIR="/"$i
