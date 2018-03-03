@@ -60,7 +60,7 @@ function checkthefile {
     sumthefile $LOGFILENAME $ANALYZED $LD
   elif [ -f $ANALYZED ]; then
     echo $ANALYZED
-    sumthefile $LOGFILENAME $ANALYZED
+    sumthefile $LOGFILENAME $ANALYZED $LD
   elif [ -e $ANALYZED ]; then
     echo $ANALYZED
     sumthefile $LOGFILENAME $ANALYZED
