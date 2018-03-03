@@ -42,7 +42,7 @@ function sumthefile {
     #sha512sum $2 >> $1
     if [ -z $3 ]; then
       echo "Not checking linker"
-    elif [ -x $LD ]; the
+    elif [ -x $LD ]; then
       echo "Linker Info"
       ldfile $1 $2 $3
     else
