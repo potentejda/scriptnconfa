@@ -21,7 +21,9 @@ function ldfile {
 # Second paramter $2 - file path
 # Third parameter $3 - linker
   echo "$3 -M $2" >> $1
-  $3 -M $2 -o /dev/void >> $1
+  set +e
+  $3 -M $2 -o /dev/null >> $1
+  set -e
 }
 
 function sumthefile {
