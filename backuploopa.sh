@@ -1,5 +1,5 @@
-#!/bin/ksh
-# SPDX GPL-3.0
+#!/bin/bash
+# SPDX-License-Identifier: GPL-3.0
 # First parameter $1 - archive name
 # Second parameter $2 - list of dirs NOT to be backed up
 set -e

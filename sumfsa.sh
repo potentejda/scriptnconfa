@@ -1,5 +1,5 @@
-#!/bin/ksh
-# SPDX GPL-3.0
+#!/bin/bash
+# SPDX-License-Identifier: GPL-3.0
 # SUMTHEFS
 # This scripts maps the filesystem tree from / node
 # and writes down cryptograhpic checksums for files
