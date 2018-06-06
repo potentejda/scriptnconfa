@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ksh
 # SPDX-License-Identifier: LGPL-3.0
 # SUMTHEFS
 # This scripts maps the filesystem tree from / node

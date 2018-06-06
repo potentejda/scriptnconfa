@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ksh
 # SPDX-License-Identifier: LGPL-3.0
 # First parameter $1 - archive name
 # Second parameter $2 - list of dirs NOT to be backed up
