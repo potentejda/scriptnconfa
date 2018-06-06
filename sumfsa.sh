@@ -81,7 +81,9 @@ function checkthefile {
       echo "Config text:" >> $LOGFILENAME
       cat $CONFIG && >> $LOGFILENAME
       echo "Tree:" >> $LOGFILENAME
+      set +e 
       find / >> $LOGFILENAME
+      set -e 
       echo "Cryptographic checksums and linker info:" >> $LOGFILENAME
         for i in `find /` 
         do
