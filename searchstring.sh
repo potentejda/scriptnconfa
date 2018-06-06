@@ -1,4 +1,5 @@
 #!/bin/ksh
+# SPDX GPL-3.0
 # First paramter $1 - string in which to search
 # Second parameter $2 - string to search
 set -e
